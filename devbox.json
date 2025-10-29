@@ -29,6 +29,8 @@
   ],
   "shell": {
     "init_hook": [
+      "export DEVBOX_BIN=\"$PWD/.devbox/nix/profile/default/bin\"",
+    "export PATH=\"$DEVBOX_BIN:/usr/local/bin:$PATH\"",
       "export GOBIN=$(git rev-parse --show-toplevel)/bin",
       "export PATH=$GOBIN:$PATH",
       "go install sigs.k8s.io/cloud-provider-kind@v0.2.0"
